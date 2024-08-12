@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Ranking Checker</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <form action="/" method="POST">
+            <h1>Tra cứu xếp hạng TN THPT 2023</h1>
+            <div class="form-group">
+                <label for="student_id">Số báo danh:</label>
+                <input type="text" id="student_id" name="student_id" required>
+            </div>
+            <div class="form-group">
+                <label for="subject_combo">Mã tổ hợp:</label>
+                <select id="subject_combo" name="subject_combo" required>
+                    <option value="A00">A00</option>
+                    <option value="A01">A01</option>
+                    <option value="C00">C00</option>
+                    <option value="D01">D01</option>
+                    <option value="D07">D07</option>
+                    <option value="khtn">khtn</option>
+                    <option value="khxh">khxh</option>
+                </select>
+            </div>
+            <input type="submit" value="Tra Cứu">
+        </form>
+
+        {% if ranking %}
+        <div class="result-container">
+            <h2>Kết quả xếp hạng</h2>
+            <p><strong>Số báo danh:</strong> {{ student_id }}</p>
+            <p><strong>Mã tổ hợp:</strong> {{ subject_combo }}</p>
+            <div class="ranking-result">
+                <p><strong>Xếp hạng toàn quốc:</strong> {{ ranking.national }}</p>
+                <p><strong>Xếp hạng trong tỉnh:</strong> {{ ranking.local }}</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
