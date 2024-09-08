@@ -2,7 +2,7 @@
 
 Trang web cho phép học sinh tra cứu xếp hạng điểm thi THPT của mình theo khối và khu vực
 ## Tính năng
-- Tra cứu xếp hạng điểm thi THPT theo các khối thi truyền thống: A00, A01, B00, C00, D01, và 2 tổ hợp Khoa học tự nhiên, Khoa học xã hội
+- Tra cứu xếp hạng điểm thi THPT theo các khối thi truyền thống: A00, A01, B00, C00, D01, D07 và 2 tổ hợp Khoa học tự nhiên, Khoa học xã hội
 - Kết quả xếp hạng có thể được so sánh trên Toàn quốc hoặc khu vực Tỉnh/ Thành phố của thí sinh 
 - Dữ liệu phục vụ cho tra cứu các năm học 2021-2022, 2022-2023, 2023-2024
 
