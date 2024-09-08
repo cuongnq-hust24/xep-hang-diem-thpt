@@ -4,10 +4,15 @@ import numpy as np
 
 app = Flask(__name__)
 
-# Load the data once when the app starts
-data = pd.read_csv('diemthi2023.csv')
 
-def tracuu(student_id, subject_combo):
+def tracuu(student_id, subject_combo, year):
+    if year == 2024:
+        data = pd.read_csv('diemthi2024.csv')
+    elif year == 2023:
+        data = pd.read_csv('diemthi2023.csv')
+    elif year == 2022:
+        data = pd.read_csv('diemthi2022.csv')
+
     ma_tinh = int(str(student_id)[:2]) * 1000000
 
     sorted_toanquoc = data.sort_values(by=subject_combo, ascending=False)
@@ -23,10 +28,11 @@ def tracuu(student_id, subject_combo):
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
+        year = request.form['year']
         student_id = request.form['student_id']
         subject_combo = request.form['subject_combo']
         
-        ranking = tracuu(int(student_id), subject_combo)
+        ranking = tracuu(int(student_id), subject_combo, int(year))
         
         return render_template('index.html', ranking=ranking, student_id=student_id, subject_combo=subject_combo)
     

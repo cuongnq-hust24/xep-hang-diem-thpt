@@ -6,12 +6,19 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 h1 {
     color: #333;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 form, .result-container {
@@ -20,7 +27,6 @@ form, .result-container {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 300px;
-    margin-top: 10px;
 }
 
 label {
@@ -53,17 +59,11 @@ input[type="submit"]:hover {
     background-color: #45a049;
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
 .result-container {
     background-color: #e0f7fa;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin-top: 20px;
 }
 
 .result-container h2 {
