@@ -1,4 +1,4 @@
-#Xếp hạng điểm THPT 
+# Xếp hạng điểm THPT 
 
 Trang web cho phép học sinh tra cứu xếp hạng điểm thi THPT của mình theo khối và khu vực
 ## Tính năng
